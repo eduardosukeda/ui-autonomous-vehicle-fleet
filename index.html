@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Veículos Autônomos</title>
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/bootstrap-theme.css" />
+</head>
+
+<body class="container">
+  <h1>
+    <nav class="nav-bar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a>Veículos Autônomos</a>
+        </div>
+      </div>
+    </nav>
+  </h1>
+  <br></br>
+
+  <div id="mensagemView"></div>
+
+  <form class="form" onsubmit="corridaController.solicitarCorrida(event)">
+    <div class="form-group">
+      <label for="data">Origem</label>
+      <input type="text" id="origem" class="form-control" placeholder="Av Ipiranga" required autofocus />
+    </div>
+
+    <div class="form-group">
+      <label for="quantidade">Destino</label>
+      <input type="text" id="destino" class="form-control" placeholder="Av São João" required />
+    </div>
+
+    <div class="text-left">
+      <div id="botao"></div>
+    </div>
+
+  </form>
+
+
+
+  <div class="text-center">
+
+    <!-- <button onclick="corridaController.apaga()" class="btn btn-primary text-center" type="button">
+       //  Apagar
+       // </button>
+       -->
+
+  </div>
+  <br />
+  <br />
+
+  <div id="corridaView" style="display: none;"></div>
+
+  <script src="js/app/models/Mensagem.js"></script>
+  <script src="js/app/models/Corrida.js"></script>
+  <script src="js/app/controllers/CorridaController.js"></script>
+  <script src="js/app/helpers/StringHelper.js"></script>
+  <script src="js/app/views/View.js"></script>
+  <script src="js/app/views/MensagemView.js"></script>
+  <script src="js/app/models/Botao.js"></script>
+  <script src="js/app/views/BotaoView.js"></script>
+  <script src="js/app/services/HttpService.js"></script>
+  <script src="js/app/services/CorridaService.js"></script>
+
+  <script>
+    let corridaController = new CorridaController();
+  </script>
+</body>
+
+</html>
